@@ -3,3 +3,38 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
+h1 {
+	text-align: center;
+	color: grey;
+	font-size: 30px;
+}
+
+.carousel {
+	width: 900px;
+	margin: 0 auto;
+	list-style-type: none;
+
+	.carousel-cell {
+		width: 900px;
+		height: 600px;
+		margin-right: 10px;
+		border-radius: 5px;
+		counter-increment: carousel-cell;
+
+		img {
+			height: 600px;
+			width: 900px;
+		}
+		.bottom-left {
+			position: absolute;
+			bottom: 8px;
+			left: 16px;
+			color: white;
+			font-size: 14px;
+			font-weight: bold;
+			background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
+			height: 20px;
+		}
+	}
+}

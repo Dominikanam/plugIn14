@@ -1,13 +1,28 @@
 {
-	"header": "Some title",
+	"header": "Carousel",
 	"slides": [{
-		"description": "Image 1",
-		"image": "",
-		"title": "Image 1"
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"image": "https://www.easytravel.co.tz/wp-content/uploads/2018/11/words-to-know-when-visiting-zanzibar-4.jpg",
+		"title": "zanzibar"
 	},
 	{
-		"description": "Image 2",
-		"image": "",
-		"title": "Image 2"
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"image": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/08/13/14/paris-summer.jpg",
+		"title": "paris"
+	},
+	{
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"image": "https://img.theculturetrip.com/970x440/smart//wp-content/uploads/2015/11/Denmark-%C2%A9-Sean-Pavone-Shutterstock.jpg",
+		"title": "denmark"
+	},
+	{
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"image": "https://d34ftvyq1mhc1v.cloudfront.net/Spainportugal_20D_web-hero.jpg",
+		"title": "spain"
+	},
+		{
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"image": "https://www.partir.com/images/pays/pays-photos-800/grece-santorin-vieille-ville.jpg",
+		"title": "grece"
 	}]
 }
