@@ -1,0 +1,13 @@
+{
+	"header": "Some title",
+	"slides": [{
+		"description": "Image 1",
+		"image": "",
+		"title": "Image 1"
+	},
+	{
+		"description": "Image 2",
+		"image": "",
+		"title": "Image 2"
+	}]
+}
