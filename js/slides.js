@@ -1,4 +1,4 @@
-import mustache from 'mustache';
+import Mustache from 'mustache';
 import jQuery from 'jquery';
 
 import slides from '../templates/slides.mustache';
@@ -11,13 +11,13 @@ export const init = () => {
 };
 
 const parse = () => {
-	mustache.parse(slides);
-	mustache.parse(slideItem);
+	Mustache.parse(slides);
+	Mustache.parse(slideItem);
 };
 
 const render = () => {
 	const element = jQuery('#app');
-	const markup = mustache.render(slides, data, { slideItem });
+	const markup = Mustache.render(slides, data, { slideItem });
 
 	element.html(markup);
 };
