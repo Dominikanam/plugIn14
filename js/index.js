@@ -1,5 +1,5 @@
 import map from './maps';
-import { init as initSlides } from './slides';
+import slides from './slides';
 
-initSlides();
+slides.init();
 map.init();

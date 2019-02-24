@@ -1,23 +1,47 @@
 import Mustache from 'mustache';
 import $ from 'jquery';
 
-import slides from '../templates/slides.mustache';
-import slideItem from '../templates/slideItem.mustache';
+import slidesTemplate from '../templates/slides.mustache';
+import slideItemTemplate from '../templates/slideItem.mustache';
 import data from '../data/slides';
+import maps from './maps';
 
-export const init = () => {
-	parse();
-	render();
-};
+var carouselOptions = { resize: true, wrapAround: true, pageDots: false  };
 
-const parse = () => {
-	Mustache.parse(slides);
-	Mustache.parse(slideItem);
-};
+class Slides {
+	init() {
+		this.parse();
+		this.render();
+	}
 
-const render = () => {
-	const element = $('#app');
-	const markup = Mustache.render(slides, data, { slideItem });
+	parse() {
+		Mustache.parse(slidesTemplate);
+		Mustache.parse(slideItemTemplate);
+	}
 
-	element.html(markup);
-};
+	render () {
+		var element = $('#app');
+		var markup = Mustache.render(
+			slidesTemplate, data, { slideItem: slideItemTemplate }
+		);
+
+		element.html(markup);
+		this.carousel = new Flickity(
+			$('.carousel').get(0), carouselOptions
+		);
+
+		this.carousel.on( 'change', index => {
+			maps.smoothPanAndZoom(
+				data.slides[index].coords
+			);
+		});
+	}
+
+	changeToSlide(slide) {
+		this.carousel.select(
+			data.slides.findIndex(s => s === slide)
+		);
+	}
+}
+
+export default new Slides();
