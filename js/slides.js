@@ -1,5 +1,5 @@
 import Mustache from 'mustache';
-import jQuery from 'jquery';
+import $ from 'jquery';
 
 import slides from '../templates/slides.mustache';
 import slideItem from '../templates/slideItem.mustache';
@@ -16,7 +16,7 @@ const parse = () => {
 };
 
 const render = () => {
-	const element = jQuery('#app');
+	const element = $('#app');
 	const markup = Mustache.render(slides, data, { slideItem });
 
 	element.html(markup);
